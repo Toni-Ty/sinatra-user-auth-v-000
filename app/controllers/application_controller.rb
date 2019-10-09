@@ -28,7 +28,6 @@ end
   get '/sessions/login' do
 
     # the line of code below render the view page in app/views/sessions/login.erb
-    put params
     erb :'sessions/login'
   end
 
@@ -36,6 +35,8 @@ end
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
+      put params
+
       redirect '/users/home'
     end
     redirect '/sessions/login'
