@@ -20,10 +20,9 @@ end
     @user.save
     session[:user_id] = @user.id
 
-
-    redirect '/users/home'
     puts params
 
+    redirect '/users/home'
   end
 
   get '/sessions/login' do
