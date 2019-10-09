@@ -7,6 +7,3 @@ class CreateUserTable <ActiveRecord::Migration
     end
   end
 end
-
-
-
