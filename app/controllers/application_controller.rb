@@ -35,10 +35,11 @@ end
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
-      put params
 
       redirect '/users/home'
     end
+    put params
+
     redirect '/sessions/login'
   end
 
