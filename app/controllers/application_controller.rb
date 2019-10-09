@@ -38,9 +38,9 @@ end
 
       redirect '/users/home'
     end
-    put params
 
     redirect '/sessions/login'
+      put params
   end
 
   get '/sessions/logout' do
